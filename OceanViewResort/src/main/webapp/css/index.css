@@ -1,0 +1,111 @@
+/* ==========================
+   Body & Background
+========================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================
+   Header
+========================== */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background:  #176d85;
+    color: white;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.header h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+/* ==========================
+   Center Container
+========================== */
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px 40px;
+    width: 420px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin: 100px auto 50px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.container h1 {
+    color: #2193b0;
+    margin-bottom: 10px;
+}
+
+.container h3 {
+    color: #176d85;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Buttons / Links */
+.container a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 14px 28px;
+    background: #2193b0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.container a:hover {
+    background: #176d85;
+    transform: scale(1.05);
+}
+
+/* ==========================
+   Footer
+========================== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background:  #176d85;
+    color: white;
+    margin-top: auto;
+}
+
+.footer a {
+    color: #6dd5ed;
+    text-decoration: none;
+}
+

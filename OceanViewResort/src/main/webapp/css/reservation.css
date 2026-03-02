@@ -1,0 +1,184 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    display: flex;
+    margin: 0;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* center form horizontally */
+    align-items: center;
+ }       
+
+/* ===== Header Panel ===== */
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: #176d85;
+    backdrop-filter: blur(8px);
+    color: white;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 40px;
+   
+}
+
+/* ===== LOGO ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+   
+}
+
+.logo img {
+    height: 45px;
+    margin-right: 10px;
+}
+
+.h {
+	margin-left: 100px;
+}
+
+
+
+/* ===== NAVIGATION ===== */
+.nav a {
+    margin: 0px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav a:hover {
+    background: #2193b0;
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.logout {
+    padding: 8px 18px;
+    margin-left: 150px;
+    background: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logout:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav a {
+        margin: 5px;
+    }
+}
+
+/* Container for form */
+.container {
+    background: white;
+    padding: 40px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    margin-top: 80px;
+}
+
+/* Headings */
+h2 {
+    color: #2193b0;
+    text-align: center;
+}
+
+/* Form elements */
+input[type="text"], input[type="email"], input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2193b0;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+button:hover {
+    background: #176d85;
+}
+
+/* Success / Error messages */
+.success {
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #176d85;
+    color: white;
+   margin-top: 80px;
+    width: 100%;
+}
+
+.footer a {
+    color: #6dd5ed;
+    text-decoration: none;
+}

@@ -1,0 +1,270 @@
+/* Page Background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    margin: 0;
+    padding: 0;
+     min-height: 100vh;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* center form horizontally */
+    align-items: center;
+ }       
+
+/* ===== Header Panel ===== */
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: #176d85;
+    backdrop-filter: blur(8px);
+    color: white;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 40px;
+   
+}
+
+/* ===== LOGO ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+   
+}
+
+.logo img {
+    height: 45px;
+    margin-right: 10px;
+}
+
+.h {
+	margin-left: 100px;
+}
+
+
+
+/* ===== NAVIGATION ===== */
+.nav a {
+    margin: 0px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.nav a:hover {
+    background: #2193b0;
+}
+
+/* ===== LOGOUT BUTTON ===== */
+.logout {
+    padding: 8px 18px;
+    margin-left: 150px;
+    background: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logout:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav a {
+        margin: 5px;
+    }
+}
+
+
+/* Main Container */
+.container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    margin-top: 80px;
+}
+
+/* Page Title */
+h2 {
+    text-align: center;
+    color: #2193b0;
+    margin-bottom: 25px;
+}
+
+/* Search Box */
+.search-box {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.search-box input[type="text"] {
+    padding: 8px;
+    width: 220px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-box button {
+    padding: 8px 15px;
+    background: #2193b0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #176d85;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+/* Table Header */
+th {
+    background-color: #2193b0;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Table Cells */
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Zebra Stripes */
+tr:nth-child(even) {
+    background-color: #f2f7fa;
+}
+
+/* Hover Effect */
+tr:hover {
+    background-color: #e6f3f8;
+}
+
+/* Action Links */
+a {
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin: 2px;
+}
+
+/* Edit Button */
+a.edit {
+    background: #ffc107;
+    color: black;
+}
+
+a.edit:hover {
+    background: #e0a800;
+}
+
+/* Delete Button */
+a.delete {
+    background: #dc3545;
+    color: white;
+}
+
+a.delete:hover {
+    background: #b02a37;
+}
+
+/* Bill Button */
+a.bill {
+    background: #28a745;
+    color: white;
+}
+
+a.bill:hover {
+    background: #1e7e34;
+}
+
+/* No Data Message */
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    .search-box {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #176d85;
+    color: white;
+   margin-top: 80px;
+    width: 100%;
+}
+
+.footer a {
+    color: #6dd5ed;
+    text-decoration: none;
+}

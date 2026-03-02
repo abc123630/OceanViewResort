@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    margin: 0;
+    padding: 0;
+}
+
+.bill-container {
+    width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-name {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section p {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+strong {
+    color: #34495e;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.total {
+    text-align: right;
+    color: #27ae60;
+    font-size: 20px;
+}
+
+/* Print Friendly */
+@media print {
+    body {
+        background: white;
+    }
+
+    .bill-container {
+        box-shadow: none;
+        border: none;
+        margin: 0;
+    }
+}
