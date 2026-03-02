@@ -6,21 +6,47 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: Build Java Maven Project (Tomcat 9)
 
-on: [push] # Trigger the workflow on push events
+# Trigger workflow on push or PR to main
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4 # Checkout the repository code
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-        cache: maven
-    - name: Build with Maven
-      run: mvn clean install # Command to build your project
+      # 1. Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Set up Java 17 (Temurin distribution)
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      # 3. Cache Maven dependencies to speed up build
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      # 4. Build the Maven project
+      # -f points to your pom.xml inside OceanViewResort folder
+      - name: Build Maven project
+        run: mvn -f OceanViewResort/pom.xml clean install -DskipTests
+
+      # 5. Run tests (optional)
+      - name: Run tests
+        run: mvn -f OceanViewResort/pom.xml test
