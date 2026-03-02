@@ -38,13 +38,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Build Maven project
-        run: mvn clean install -DskipTests
-
-      - name: Run tests
-        run: mvn test
-  
-     
+      - name: Build and Test with Maven
+        run: mvn -f OceanViewResort/pom.xml clean verify
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
    
