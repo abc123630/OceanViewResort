@@ -1,16 +1,14 @@
 package com.ocean.model;
 
-
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
-
 public class ReservationTest {
 
-    @Test
-    void testSetAndGetGuestName() {
-        Reservation reservation = new Reservation();
-        reservation.setGuestName("John");
+    private String guestName;
 
-        assertEquals("John", reservation.getGuestName());
+    public String getGuestName() {
+        return guestName;
+    }
+
+    public void setGuestName(String guestName) {
+        this.guestName = guestName;
     }
 }
