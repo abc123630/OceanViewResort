@@ -1,14 +1,24 @@
 package com.ocean.model;
 
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
 public class ReservationTest {
 
-    private String guestName;
+    @Test
+    void testGuestName() {
 
-    public String getGuestName() {
-        return guestName;
-    }
+        Reservation reservation = new Reservation(
+                1,
+                "John",
+                "Colombo",
+                "0771234567",
+                101,
+                "2026-03-01",
+                "2026-03-03"
+        );
 
-    public void setGuestName(String guestName) {
-        this.guestName = guestName;
+     // Correct expected value
+        assertEquals("John", reservation.getGuestName());
     }
 }

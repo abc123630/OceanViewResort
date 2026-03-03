@@ -3,10 +3,11 @@ package com.ocean.service;
 
 import com.ocean.model.Reservation;
 
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class ReservationServiceTest {
+public class ReservationServiceTest {
 
 	@Test
 	void testCalculateBill() {
