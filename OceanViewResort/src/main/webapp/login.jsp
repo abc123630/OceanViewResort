@@ -4,7 +4,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
     <title>Login - Ocean View Resort</title>
     <link rel="stylesheet" href="css/login.css">
     <script src="js/validation.js"></script>
