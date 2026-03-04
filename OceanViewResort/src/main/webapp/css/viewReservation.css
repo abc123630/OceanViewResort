@@ -15,7 +15,7 @@ body {
     align-items: center;
  }       
 
-/* ===== Header Panel ===== */
+/* Header Panel */
 
 .header {
     display: flex;
@@ -38,7 +38,7 @@ body {
    
 }
 
-/* ===== LOGO ===== */
+/* LOGO */
 .logo {
     display: flex;
     align-items: center;
@@ -59,7 +59,7 @@ body {
 
 
 
-/* ===== NAVIGATION ===== */
+/* NAVIGATION */
 .nav a {
     margin: 0px 10px;
     color: white;
@@ -75,7 +75,7 @@ body {
     background: #2193b0;
 }
 
-/* ===== LOGOUT BUTTON ===== */
+/* LOGOUT BUTTON */
 .logout {
     padding: 8px 18px;
     margin-left: 150px;
@@ -92,7 +92,7 @@ body {
     transform: scale(1.05);
 }
 
-/* ===== MOBILE RESPONSIVE ===== */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
 
     .header-container {

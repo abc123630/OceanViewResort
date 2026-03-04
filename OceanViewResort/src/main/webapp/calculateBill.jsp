@@ -54,7 +54,7 @@
                 if(reservations != null) {
                     for(Reservation r : reservations) {
             %>
-                <option value="<%= r.getId() %>"
+               <option value="<%= r.getId() %>"
                     <%= request.getParameter("reservationId") != null && request.getParameter("reservationId").equals(String.valueOf(r.getId())) ? "selected" : "" %>>
                     <%= r.getGuestName() %> - <%= r.getRoomType() %> (Room <%= r.getRoomNumber() %>)
                 </option>
