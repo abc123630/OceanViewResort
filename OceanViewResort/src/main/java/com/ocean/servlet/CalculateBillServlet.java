@@ -42,7 +42,7 @@ public class CalculateBillServlet extends HttpServlet {
         // Calculate total amount
         double total = nights * r.getRatePerNight();
 
-        // 5️⃣ Send data to JSP
+        // Send data to JSP
         request.setAttribute("reservation", r);
         request.setAttribute("nights", nights);
         request.setAttribute("total", total);
