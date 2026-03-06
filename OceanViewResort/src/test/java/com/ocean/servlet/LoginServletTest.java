@@ -1,34 +1,35 @@
 package com.ocean.servlet;
 
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
-import static org.junit.jupiter.api.Assertions.*;
-
-import javax.servlet.http.*;
-import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentCaptor;
 
 import java.io.IOException;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
+
 class LoginServletTest {
 
-    @Test
-    void testInvalidLoginRedirectsToError() throws IOException {
-        // Arrange
-        LoginServlet servlet = new LoginServlet();
-        HttpServletRequest request = mock(HttpServletRequest.class);
-        HttpServletResponse response = mock(HttpServletResponse.class);
+	@Test
+	void testValidLoginRedirectsToDashboard() throws ServletException, IOException {
 
-        when(request.getParameter("username")).thenReturn("user");
-        when(request.getParameter("password")).thenReturn("123");
+	    LoginServlet servlet = new LoginServlet();
 
-        ArgumentCaptor<String> redirectCaptor = ArgumentCaptor.forClass(String.class);
+	    HttpServletRequest request = mock(HttpServletRequest.class);
+	    HttpServletResponse response = mock(HttpServletResponse.class);
 
-        // Act
-        servlet.doPost(request, response);
+	    when(request.getParameter("username")).thenReturn("admin");
+	    when(request.getParameter("password")).thenReturn("admin123");
 
-        // Assert
-        verify(response).sendRedirect(redirectCaptor.capture());
-        assertEquals("login.jsp?error=true", redirectCaptor.getValue());
-    }
-}
+	    ArgumentCaptor<String> redirectCaptor = ArgumentCaptor.forClass(String.class);
+
+	    servlet.doPost(request, response);
+
+	    verify(response).sendRedirect(redirectCaptor.capture());
+	    assertEquals("dashboard.jsp", redirectCaptor.getValue());
+	}
+}	
