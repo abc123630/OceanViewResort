@@ -55,7 +55,7 @@
     <%
         } else {
     %>
-        <p>Hello, Guest 👋</p>
+        <p>Hello, Guest </p>
     <%
         }
     %>
@@ -101,36 +101,44 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="rooms-section">
     <h2>Available Room Types</h2>
     <div class="rooms-container">
-
+    
+       <div class="r1">
         <div class="room-card">
             <img src="images/single.jpg" alt="Single Room">
             <h3>Single Room</h3>
             <p>Price: Rs.5000 / Night</p>
             <p>Comfortable room for one guest</p>
         </div>
+        </div>
         
         </div>
 
+       
         <div class="room-card">
             <img src="images/double.jpg" alt="Double Room">
             <h3>Double Room</h3>
             <p>Price: Rs.8000 / Night</p>
-            <p>Perfect for two guests</p>
+            <p>Perfect for two guests comfortably</p>
         </div>
+        
 
+       
         <div class="room-card">
             <img src="images/family.jpg" alt="Family Room">
             <h3>Family Room</h3>
             <p>Price: Rs.12000 / Night</p>
-            <p>Spacious room for families</p>
+            <p>Spacious room for families comfortably</p>
         </div>
-
+      
+        
+      
         <div class="room-card">
             <img src="images/suite.jpg" alt="Suite">
             <h3>Suite</h3>
             <p>Price: Rs.20000 / Night</p>
             <p>Luxury suite with premium facilities</p>
         </div>
+     
 
     </div>
 </div>

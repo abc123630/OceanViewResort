@@ -11,6 +11,7 @@
 </head>
 <body>
 
+
 <div class="container">
 
 <h2>Edit Reservation</h2>
@@ -77,6 +78,7 @@ if (r != null) {
 <a href="ViewReservationServlet">Back to Reservation List</a>
 
 </div>
+
 
 </body>
 </html>
