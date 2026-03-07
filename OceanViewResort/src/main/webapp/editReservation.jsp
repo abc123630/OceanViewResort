@@ -7,7 +7,7 @@
 <html>
 <head>
     <title>Edit Reservation</title>
-    <link rel="stylesheet" href="css/reservation.css">
+    <link rel="stylesheet" href="css/editReservation.css">
 </head>
 <body>
 
